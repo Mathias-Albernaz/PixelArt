@@ -13,7 +13,14 @@ body{
 }
 
 .contenedor_principal{
+    display: flex;
+    flex-wrap: wrap;
     height: 70%;
     aspect-ratio: 1/1;
     border: solid gray;
+}
+
+.pixel{
+    width: 6.25%;
+    aspect-ratio: 1/1;
 }
