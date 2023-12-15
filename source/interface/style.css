@@ -21,6 +21,9 @@ body{
 }
 
 .pixel{
-    width: 6.25%;
-    aspect-ratio: 1/1;
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;  
 }
+
