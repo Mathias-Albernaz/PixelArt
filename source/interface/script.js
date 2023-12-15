@@ -9,11 +9,11 @@ var slider = document.querySelector("#slider_pixeles")
 var tamanio = 32;
 etiquetaTamanio.textContent = tamanio + " x " + tamanio;
 crearPixeles(tamanio);
+
 botonBorrar.addEventListener('click', ()=>{
     contenedor.innerHTML = '';
     crearPixeles(tamanio);
 })
-
 colorPicker.addEventListener("input", ()=>{
     color = colorPicker.value;
     console.log(color);
@@ -47,7 +47,6 @@ function crearPixeles(tamanio){
         contenedor.append(pixel);
     }
 }
-
 
 //*Añade listeners a los pixeles
 function listeners(elemento){
