@@ -2,6 +2,7 @@
 let contenedor = document.querySelector(".contenedor_principal");
 let etiquetaTamanio = document.querySelector("#etiqueta_tamanio");
 let botonBorrar = document.querySelector(".borrador");
+let colorPicker = document.querySelector(".selector_color")
 var click = false;
 var color = "grey";
 var slider = document.querySelector("#slider_pixeles")
@@ -13,6 +14,14 @@ botonBorrar.addEventListener('click', ()=>{
     crearPixeles(tamanio);
 })
 
+colorPicker.addEventListener("input", ()=>{
+    color = colorPicker.value;
+    console.log(color);
+});
+colorPicker.addEventListener("change", ()=>{
+    color = colorPicker.value;
+    console.log(color);
+});
 
 //*Propiedad de clickear 
 document.body.onmousedown = () => (click = true);
@@ -44,11 +53,12 @@ function crearPixeles(tamanio){
 function listeners(elemento){
     elemento.addEventListener('mouseover', function(){
         if(click){
-            elemento.style.backgroundColor = "grey";
+            elemento.style.backgroundColor = color;
         }
     })
     elemento.addEventListener('click', function(){
-        elemento.style.backgroundColor = "grey";
+        elemento.style.backgroundColor = color;
     })
 }
+
 
